@@ -400,7 +400,6 @@ func main() {
 	gw := &GithubWebhook{pushEvents: make(map[int64][]OnPayload), repositoryEvents: make(map[int64][]OnPayload), repoNames: make(map[int64]string)}
 	gw.AddPushEvent(364735060, updateLocal)
 	gw.AddRepositoryEvent(364735060, renameLocal)
-
 	// NOTE: To find out the id of a repository, go to the repo page, open the browser / developer console and execute `document.head.querySelector("meta[name=octolytics-dimension-repository_id]").content`
 
 	r.HandleFunc("/github_webhook", gw.OnWebhook).Methods("POST")
