@@ -6,7 +6,11 @@ If you want to change the image, just replace 'firefox-icon-fix.png' with the im
 
 Since the script uses softlinks to reduce space, make sure you never delete or change this directory if it is on your disk and you have fixed the icons with the script.
 
-> To make the script executable, type `chmod +x firefox-icon-fix.sh`
+**NOTE:**
+For better usage make the script executable first:
+```console
+$ chmod +x firefox-icon-fix.sh
+```
 
 #### Usage
 
