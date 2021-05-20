@@ -6,3 +6,4 @@ This repository contains some (linux) scripts I am using to simplify my daily wo
 
 - [Change firefox icons](/firefox-icon-fix)
 - [Github repository mirror](/github-webhook)
+- [Merge pdf files together](merge-pdf)
