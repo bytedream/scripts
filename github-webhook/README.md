@@ -9,7 +9,7 @@ The library is pretty useful, but too overloaded for my purposes.
 
  - [gorilla/mux](https://github.com/gorilla/mux), but if you want to, you can easily cut out the gurilla/mux api and replace it with the api you prefer
 
-### Usage
+#### Usage
 
 1. Create a repository [webhook](https://docs.github.com/en/developers/webhooks-and-events/creating-webhooks) on github.
 2. Not necessary, but highly recommended: Choose a [secret](https://docs.github.com/en/developers/webhooks-and-events/securing-your-webhooks) for the webhook.
