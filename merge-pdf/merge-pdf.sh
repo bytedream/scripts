@@ -2,7 +2,7 @@
 
 while getopts ":o:" opt; do
   case $opt in
-      o | output)
+      o)
         output=$OPTARG
         ;;
       *)
