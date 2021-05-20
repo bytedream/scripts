@@ -4,7 +4,6 @@ while getopts ":o:" opt; do
   case $opt in
       o | output)
         output=$OPTARG
-        shift $((OPTIND -1))
         ;;
       *)
         echo "Unsupported argument was given (only '-o' is allowed)"
@@ -12,6 +11,7 @@ while getopts ":o:" opt; do
         ;;
     esac
 done
+shift $((OPTIND -1))
 
 
 if [ -z $output ]; then
