@@ -4,14 +4,14 @@ while getopts ":o:output:" opt; do
   case $opt in
       o | output)
         output=$OPTARG
+        shift $((OPTIND -1))
         ;;
       *)
-        echo "Unsupported argument was given (only '-o' is allowd)"
+        echo "Unsupported argument was given (only '-o' is allowed)"
         exit 1
         ;;
     esac
 done
-shift $((OPTIND -1))
 
 
 if [ -z $output ]; then
