@@ -1,6 +1,6 @@
 #!/bin/bash
 
-while getopts ":o:output:" opt; do
+while getopts ":o:" opt; do
   case $opt in
       o | output)
         output=$OPTARG
