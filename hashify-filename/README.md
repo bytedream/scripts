@@ -1,6 +1,7 @@
 ## Hashify Filename
 
-With this little script you can rename given files to its [MD5](https://en.wikipedia.org/wiki/MD5) hashsum. File extension won't be changed.
+This little script renames given files to its [MD5](https://en.wikipedia.org/wiki/MD5) hashsum. File extension won't be changed.
+This allows duplicate files in the same directory to be easily detected and merged / overwritten.
 
 This script is just a fork of [randomize-filename](../randomize-filename).
 

@@ -38,7 +38,9 @@ function rename() {
             continue
         fi
         filename="$(md5sum $filepath | awk '{print $1}')$ext"
-        mv "$filepath" "$base/$filename"
+        if [ $file != $filename ]; then
+            mv -f "$filepath" "$base/$filename"
+        fi
     done
 }
 
