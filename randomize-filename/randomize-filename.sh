@@ -38,7 +38,6 @@ function rename() {
 
     for file in $*; do
         file=${file//[\\]/}
-        echo $file
         filepath="$base/$file"
         ext="${file##*.}"
         if [ "$ext" == "$file" ]; then
