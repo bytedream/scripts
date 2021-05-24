@@ -8,6 +8,7 @@ This repository contains some (linux) scripts I am using to simplify my daily wo
 - [Github repository mirror](/github-webhook)
 - [Merge pdf files together](/merge-pdf)
 - [Rename files random](/randomize-filename)
+- [Rename files based on their MD5 hashsum](/hashify-filename)
 
 
 If you want to use any of the (bash!) scripts globaly, see [pathify](/pathify)
