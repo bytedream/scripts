@@ -6,7 +6,8 @@ This repository contains some (linux) scripts I am using to simplify my daily wo
 
 - [Change firefox icons](/firefox-icon-fix)
 - [Github repository mirror](/github-webhook)
-- [Merge pdf files together](merge-pdf)
+- [Merge pdf files together](/merge-pdf)
+- [Rename files random](/randomize-filename)
 
 
 If you want to use any of the (bash!) scripts globaly, see [pathify](/pathify)
