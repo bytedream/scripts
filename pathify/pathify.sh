@@ -29,11 +29,11 @@ if [ $# -ge 1 ]; then
         echo "The script is already installed"
       fi
     elif [ ! -z $link ]; then
-      ln -s "$path/$1.sh" $executablePath
+      ln -s $path/$1.* $executablePath
       echo "Pathified $1"
     else
       cp -r $path /usr/share
-      ln -s "/usr/share/$1/$1.sh" $executablePath
+      ln -s /usr/share/$1/$1.* $executablePath
       echo "Pathified $1"
     fi
   else
