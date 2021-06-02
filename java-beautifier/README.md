@@ -5,8 +5,9 @@ Makes java code look like it should.
 #### Usage
 
 Beautifies a java file.
-
-`./java-beautifier.py <a java file>`
+```
+./java-beautifier.py <a java file>
+```
 
 #### Example
 
