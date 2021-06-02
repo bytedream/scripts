@@ -4,14 +4,13 @@ Makes java code look like it should.
 
 #### Usage
 
-Beautifies a java file.
 ```
 ./java-beautifier.py <a java file>
 ```
 
 #### Example
 
-1. Create `Main.java` with the content
+1. Create a `Main.java` with the following content:
     ```java
     public class Main {
     
@@ -30,7 +29,7 @@ Beautifies a java file.
 
 2. Beautify the file: `./java-beautifier.py Main.java`
 
-3. Look at the beautiful output
+3. Look at the beautiful output:
     ```java
     public class Main                             {
     public static void main(String[] args)        {
