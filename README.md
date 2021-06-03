@@ -5,7 +5,6 @@ This repository contains some (linux) scripts I am using to simplify my daily wo
 ### Overview
 
 - [Change firefox icons](/firefox-icon-fix)
-- [Github repository mirror](/github-webhook)
 - [Merge pdf files together](/merge-pdf)
 - [Rename files random](/randomize-filename)
 - [Rename files based on their MD5 hashsum](/hashify-filename)
