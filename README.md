@@ -11,4 +11,4 @@ This repository contains some (linux) scripts I am using to simplify my daily wo
 - [Beautify java source code](/java-beautifier)
 
 
-If you want to use any of the (bash!) scripts globaly, see [pathify](/pathify)
+If you want to use any of the scripts globally, execute [globalize.sh](globalize.sh)
