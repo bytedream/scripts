@@ -9,6 +9,6 @@ This repository contains some (linux) scripts I am using to simplify my daily wo
 - [Rename files random](/randomize-filename)
 - [Rename files based on their MD5 hashsum](/hashify-filename)
 - [Beautify java source code](/java-beautifier)
-
+- [Name availability check (websites & github)](/nameavability)
 
 If you want to use any of the scripts globally, execute [globalize.sh](globalize.sh)
