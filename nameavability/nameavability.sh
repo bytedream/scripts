@@ -26,7 +26,7 @@ main() {
             fi
         done
 
-        github_availability=`curl -o /dev/null -s -w "%{http_code}" https://github.com/$name`
+        github_availability=`curl --connect-timeout 3 --retry 3  -o /dev/null -s -w "%{http_code}" https://github.com/$name`
         if [ "$github_availability" == "200" ]; then
             echo -e "\tGitHub: NOT available"
         else
