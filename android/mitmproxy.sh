@@ -131,7 +131,7 @@ up() {
 }
 
 down() {
-  adb shell settings delete global http_proxy
+  adb shell shell settings put global http_proxy :0
   adb shell reboot -p
 }
 
