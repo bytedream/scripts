@@ -6,3 +6,7 @@ This repository contains some Linux scripts I am using to simplify some of my wo
 
 - DNS
   - [clear-cache.sh](dns/clear-cache.sh) - Clear the systemd DNS cache
+
+- Patches
+  - [spotify.sh](patches/spotify.sh) - Use [SpotX-Bash](https://github.com/SpotX-Official/SpotX-Bash) to patch a existing spotify installation
+
