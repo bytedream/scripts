@@ -27,30 +27,24 @@ main() {
 			height=$(ffprobe -v error -select_streams v:0 -show_entries stream=height -of default=noprint_wrappers=1:nokey=1 "$file")
 			rotation=$(ffprobe -v error -select_streams v:0 -show_entries stream_side_data=rotation -of default=noprint_wrappers=1:nokey=1 "$file")
 			if [ "$rotation" -eq "90" ] || [ "$rotation" -eq "-90" ]; then
-				new_width=height
-				new_height=width
-				width=new_width
-				height=new_height
+				new_width=$height
+				new_height=$width
+				width=$new_width
+				height=$new_height
 			fi
-			
+
 			if [ "$width" -gt "$height" ]; then
 				width=1920
-				height=1080
+				height=-1
 			else
-				width=1080
+				width=-1
 				height=1920
 			fi
 
-			# av1
-			ffmpeg -i "$file" -vf scale="$width:$height" -c:v libsvtav1 -preset 4 -crf 23 -pix_fmt yuv420p10le -svtav1-params tune=0:film-grain=8 -c:a copy "${filename}_av1.mp4"
-			# vp9
-			ffmpeg -i "$file" -vf scale="$width:$height" -c:v libvpx-vp9 -crf 31 -b:v 1800k -minrate 900k -maxrate 2610k -tile-columns 2 -g 240 -threads 8 -quality good -pass 1 -speed 4 -an -f null /dev/null
-			ffmpeg -i "$file" -vf scale="$width:$height" -c:v libvpx-vp9 -crf 31 -b:v 1800k -minrate 900k -maxrate 2610k -tile-columns 3 -g 240 -threads 8 -quality good -c:a libopus -pass 2 -speed 4 -y "${filename}_vp9.webm"
-			# h264
-			ffmpeg -i "$file" -vf scale="$width:$height" -c:v libx264 -preset 4 -crf 17 -pix_fmt yuv420p10le -x264opts qp=0 -movflags +faststart -c:a copy "${filename}_h264.mp4"
+			ffmpeg -i "$file" -vf scale="$width:$height" -b:v 1800k -minrate 900k -maxrate 2610k -tile-columns 2 -g 240 -threads 8 -quality good -crf 31 -c:v libvpx-vp9 -c:a copy -pass 1 -passlogfile /tmp/ffmpeg2pass -speed 4 -an -f null /dev/null
+			ffmpeg -i "$file" -vf scale="$width:$height" -b:v 1800k -minrate 900k -maxrate 2610k -tile-columns 3 -g 240 -threads 8 -quality good -crf 32 -c:v libvpx-vp9 -c:a copy -pass 2 -passlogfile /tmp/ffmpeg2pass -speed 4 "${filename}_public.mp4"
 		done
 	done
 }
 
 main $@
-
